@@ -190,6 +190,8 @@ class _VideoPlayer {
     videoElement.onEnded.listen((dynamic _) {
       eventController.add(VideoEvent(eventType: VideoEventType.completed));
     });
+
+    videoElement.load();
   }
 
   void sendBufferingUpdate() {
